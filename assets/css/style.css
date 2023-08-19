@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #eee;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.img-logo {
+    height: 3.5em;
+}
+
+#btn-menu {
+    padding: 5px 10px;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    gap: .4rem;
+}
+
+.nav-list {
+    background-color: #111;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 40vw;
+    top: 10vh;
+    left: 100%;
+    height: 90vh;
+    z-index: 100;
+    transition: .6s;
+}
+
+.nav-item {
+    width: 100%;
+    padding: .8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item a {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: .8rem;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+#hamburger {
+    width: 27px;
+    border-top: 3px solid #fff;
+    display: block;
+}
+
+#hamburger::after,
+#hamburger::before {
+    content: '';
+    display: block;
+    width: 27px;
+    height: 3px;
+    margin-top: 5px;
+    background-color: #fff;
+    transition: 0.3s;
+    position: relative;
+}
+
+#menu.active .nav-list {
+    left: 60%;
+    overflow-y: auto;
+}
+
+#menu.active #hamburger {
+    border-top: transparent;
+}
+
+#menu.active #hamburger::after {
+    background-color: red;
+    transform: rotate(135deg);
+    top: -8px;
+}
+
+#menu.active #hamburger::before {
+    background-color: red;
+    transform: rotate(-135deg);
+}
