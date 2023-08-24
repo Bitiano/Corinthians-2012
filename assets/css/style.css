@@ -114,12 +114,16 @@ header {
 }
 
 #menu.active #hamburger::after {
-    background-color: red;
+    background-color: #ff0000;
     transform: rotate(135deg);
     top: -8px;
 }
 
 #menu.active #hamburger::before {
-    background-color: red;
+    background-color: #ff0000; 
     transform: rotate(-135deg);
+}
+
+main{
+    margin-top: 10vh;
 }
